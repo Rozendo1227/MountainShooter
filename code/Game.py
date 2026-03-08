@@ -1,21 +1,21 @@
 import pygame
 
+from code.Menu import Menu
+
 
 class Game:
+
     def __init__(self):
-        self.window = None
-
-    def run(self)
-        print('Setup start')
         pygame.init()
-        window = pygame.display.set_mode(size=(600, 480))
-        print('Setup end')
+        self.window = pygame.display.set_mode((600, 480))
 
-        print('Loop start')
+    def run(self):
         while True:
-            # Check for all events
-            for event in pygame.event.get():
-                if event.type == pygame.QUIT:
-                    print('Quiting....')
-                pygame.quit()  # Close Window
-                quit()  # End pygame
+            menu = Menu(self.window)
+            menu.run()
+            pass
+
+            # for event in pygame.event.get():
+            #   if event.type == pygame.QUIT:
+            #    pygame.quit()
+            #   return
